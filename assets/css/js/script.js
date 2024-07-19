@@ -4,6 +4,8 @@ let nextId = JSON.parse(localStorage.getItem("nextId"));
 
 const card_section = $('.card')
 
+$('.datepicker').datepicker();
+
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
    const task_id = Math.floor(Math.random() * 1);
