@@ -18,7 +18,7 @@ function generateTaskId() {
 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
-    let task = 
+    
 
 }
 
