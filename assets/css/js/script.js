@@ -78,10 +78,11 @@ event.preventDefault();
 
 AddTaskBtn = $('.btn-primary')
 
-AddTaskBtn.on('click',handleAddTask)
+AddTaskBtn.on('click',handleAddTask())
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
+   event.preventDefault();
    taskList
 for(let i =0; i < taskList.length;i++){
    if(taskList.task.taskId[i] === taskId){
