@@ -2,9 +2,14 @@
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
 
-const card_section = $('.card')
+const taskHeader = $("#task-title").val()
+const taskDescription = $('#task-description').val()
+const taskDueDate = $('#datepicker').val()
+const todo = $('#todo-cards')
 
-$('.datepicker').datepicker();
+
+
+
 
 let tasks = []
 
@@ -18,9 +23,27 @@ function generateTaskId() {
 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
-    
 
-}
+   for(let i =0; i< taskList.length; i ++) {
+      task = taskList[i]
+   
+     taskCard = $('<div>')
+     taskCardHeader = $('<h2>')
+     taskCardsubHeader =$('<h3>')
+     taskCardBody = $('<p>')
+
+     taskCardHeader.text(taskHeader)
+     taskCardsubHeader.text(taskDueDate)
+     taskCardBody.text(taskDueDate)
+
+     taskCard.append(taskCardHeader)
+     taskCardHeader.append(taskCardsubHeader)
+     taskCardsubHeader.append(taskCardBody)
+     todo.append(taskCard)
+   }
+   return task
+
+   }
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
@@ -29,6 +52,7 @@ function renderTaskList() {
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
+   
 
 }
 
