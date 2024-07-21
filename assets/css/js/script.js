@@ -46,3 +46,13 @@ function handleDrop(event, ui) {
 $(document).ready(function () {
 
 });
+
+//datepicker function
+
+
+$(function () {
+   $('#datepicker').datepicker({
+     changeMonth: true,
+     changeYear: true,
+   });
+ });
