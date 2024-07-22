@@ -67,7 +67,7 @@ event.preventDefault();
    taskHeader,
    taskDescription,
    taskDueDate, 
-   taskIdgenerate = taskId,
+   taskIdgenerate : taskId,
  }
 
  tasks.push(task)
